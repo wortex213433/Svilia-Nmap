@@ -102,7 +102,7 @@ const CoreVisualizer = ({ isScanning }: { isScanning: boolean }) => (
       </motion.div>
       <div className="mt-8 text-center">
         <h3 className="text-xs uppercase tracking-[0.4em] font-bold text-slate-500">Processing Engine</h3>
-        <p className="mt-1 text-sm font-bold text-white tracking-wide">CORE-X9 RECON</p>
+        <p className="mt-1 text-sm font-bold text-white tracking-wide">SVILIA SECTOR-7</p>
       </div>
     </div>
 
@@ -166,7 +166,7 @@ export default function App() {
   }, [logs]);
 
   return (
-    <div id="zenith-root" className="relative flex h-screen w-full bg-void overflow-hidden select-none">
+    <div id="svilia-root" className="relative flex h-screen w-full bg-void overflow-hidden select-none">
       <HexagonBackground />
 
       <aside id="sidebar-discovery" className="relative z-20 flex flex-col items-center py-8 w-20 border-r border-glass-border bg-obsidian/50 backdrop-blur-md">
@@ -224,7 +224,7 @@ export default function App() {
               onClick={handleStartScan}
               disabled={isScanning}
               className={cn(
-                "h-12 px-8 rounded-xl font-bold uppercase tracking-widest text-sm flex items-center gap-3 transition-all duration-500",
+                "h-12 px-8 rounded-xl font-bold uppercase tracking-widest text-[11px] flex items-center gap-3 transition-all duration-500",
                 isScanning 
                   ? "bg-slate-800 text-slate-500 cursor-not-allowed border border-white/5" 
                   : "bg-cyber-lime text-void shadow-[0_0_30px_rgba(204,255,0,0.3)] hover:scale-105 active:scale-95 group"
@@ -238,7 +238,7 @@ export default function App() {
               ) : (
                 <>
                   <Zap className="w-4 h-4 fill-current group-hover:animate-bounce" />
-                  Ignite Recon
+                  Execute Svilia
                 </>
               )}
             </button>
@@ -272,7 +272,7 @@ export default function App() {
                         <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Temporal Progress</span>
                         <h4 className="text-xl font-bold text-white tabular-nums tracking-tight">{Math.round(progress)}%</h4>
                       </div>
-                      <span className="text-[10px] font-mono text-cyber-lime glow-text">X-VECTOR-SYNC_V2</span>
+                      <span className="text-[10px] font-mono text-cyber-lime glow-text">SVILIA-X-VECTOR-SYNC_V4</span>
                     </div>
                     <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden border border-white/5">
                       <motion.div 
