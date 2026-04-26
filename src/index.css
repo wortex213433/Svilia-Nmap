@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-cyber-lime: #ccff00;
+  --color-electric-violet: #8b5cf6;
+  --color-void: #0a0a0c;
+  --color-obsidian: #121216;
+  --color-glass: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+
+  --animate-scan-pulse: scan-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-core-rotate: core-rotate 10s linear infinite;
+
+  @keyframes scan-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.05); }
+  }
+
+  @keyframes core-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-void text-slate-300 font-sans antialiased selection:bg-cyber-lime selection:text-void overflow-hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-cyber-lime/40 transition-colors;
+  }
+}
+
+.glass-panel {
+  @apply bg-glass border border-glass-border backdrop-blur-xl rounded-2xl;
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+}
+
+.glow-border {
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
+}
+
