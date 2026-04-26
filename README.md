@@ -1,77 +1,82 @@
-[README.md](https://github.com/user-attachments/files/27105117/README.md)
-
+[Uploading README (1).md…]()
 <div align="center">
 
-# ⚡ SVILIA-NMAP
-### Advanced Network Discovery & Recon Interface
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=39FF14&center=true&vCenter=true&width=600&lines=SVILIA-NMAP;Advanced+Network+Discovery;Recon+%7C+Scan+%7C+Detect" alt="Typing SVG" />
 
-![Version](https://img.shields.io/badge/version-v4.9.2--ALPHA-brightgreen?style=for-the-badge)
-![Platform](https://img.shields.io/badge/platform-Kali%20Linux-557C94?style=for-the-badge&logo=linux)
-![Tech](https://img.shields.io/badge/built%20with-React%20%2B%20TypeScript-61DAFB?style=for-the-badge&logo=react)
-![License](https://img.shields.io/badge/license-MIT-yellow?style=for-the-badge)
+<br/>
 
-> **Svilia-Nmap**, Nmap'in gücünü modern ve şık bir web arayüzüyle birleştiren gelişmiş bir ağ keşif ve recon aracıdır.
+![Version](https://img.shields.io/badge/VERSION-v4.9.2--ALPHA-39FF14?style=for-the-badge&labelColor=0d0d0d)
+![Platform](https://img.shields.io/badge/PLATFORM-KALI_LINUX-557C94?style=for-the-badge&labelColor=0d0d0d&logo=linux&logoColor=white)
+![Stack](https://img.shields.io/badge/STACK-React_+_TypeScript-61DAFB?style=for-the-badge&labelColor=0d0d0d&logo=react&logoColor=61DAFB)
+![Engine](https://img.shields.io/badge/ENGINE-NMAP_7.98-FF6B35?style=for-the-badge&labelColor=0d0d0d)
+
+<br/>
+
+> **Svilia-Nmap**, Nmap'in gücünü modern bir web arayüzüyle birleştiren gelişmiş ağ keşif ve recon platformudur. Kinetic Engine Visualizer ile gerçek zamanlı ağ analizi yapın.
+
+<br/>
+
+---
 
 </div>
 
----
+## ⚡ Özellikler
 
-## 🖥️ Arayüz
-
-Svilia-Nmap, **Kinetic Engine Visualizer** adı verilen gerçek zamanlı görselleştirme motoru ve **Live Recon Stream** ile scan sonuçlarını anlık olarak takip etmenizi sağlar.
-
----
-
-## ✨ Özellikler
-
-- 🔍 **Quick Scan** — Ağdaki cihazları hızlıca keşfeder
-- 🖥️ **OS Detect** — Hedef sistemlerin işletim sistemini tespit eder
-- 📜 **Script Audit** — Nmap NSE scriptleriyle gelişmiş güvenlik denetimi yapar
-- ⚡ **Live Recon Stream** — Scan sonuçlarını gerçek zamanlı akışla gösterir
-- 🌐 **Kinetic Engine Visualizer** — Ağ topolojisini görsel olarak işler
-- 🎯 **CIDR Desteği** — Tekil IP veya ağ aralığı (örn. `192.168.1.0/24`) taraması
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  QUICK SCAN     →  Ağdaki aktif cihazları hızlıca keşfeder     │
+│  OS DETECT      →  Hedef sistemin işletim sistemini tespit eder │
+│  SCRIPT AUDIT   →  NSE scriptleriyle gelişmiş güvenlik denetimi│
+│  LIVE STREAM    →  Sonuçları gerçek zamanlı olarak gösterir     │
+│  KINETIC VIZ    →  Ağ topolojisini görsel olarak işler          │
+│  CIDR SUPPORT   →  192.168.1.0/24 gibi ağ aralığı desteği      │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## 🛠️ Gereksinimler
 
-- [Nmap](https://nmap.org/) (v7.0+)
-- [Node.js](https://nodejs.org/) (v20+)
-- npm
-- Kali Linux (önerilir) veya herhangi bir Linux dağıtımı
+| Araç | Minimum Versiyon |
+|------|-----------------|
+| Nmap | v7.0+ |
+| Node.js | v20+ |
+| npm | v9+ |
+| OS | Kali Linux (önerilir) |
 
 ---
 
 ## 🚀 Kurulum
 
-**1. Repoyu klonla:**
+**1 — Repoyu klonla**
 ```bash
 git clone https://github.com/wortex213433/Svilia-Nmap.git
 cd Svilia-Nmap
 ```
 
-**2. Node.js kur (Kali Linux):**
+**2 — Node.js kur (Kali Linux)**
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
 sudo apt install -y nodejs
 ```
 
-**3. Bağımlılıkları yükle:**
+**3 — Bağımlılıkları yükle**
 ```bash
 npm install
 ```
 
-**4. Ortam değişkenlerini ayarla:**
+**4 — Ortam değişkenlerini ayarla**
 ```bash
 cp .env.example .env
+# .env dosyasını düzenleyip gerekli değerleri doldur
 ```
 
-**5. Uygulamayı başlat:**
+**5 — Çalıştır**
 ```bash
 npm run dev
 ```
 
-**6. Tarayıcıdan aç:**
+**6 — Tarayıcıdan aç**
 ```
 http://localhost:3000
 ```
@@ -80,49 +85,75 @@ http://localhost:3000
 
 ## 📖 Kullanım
 
-1. Üstteki arama kutusuna hedef IP veya ağ aralığı gir:
-   ```
-   192.168.1.1          # Tekil IP
-   192.168.1.0/24       # Ağ aralığı
-   ```
+**Hedef gir:**
+```
+192.168.1.1           # Tekil IP
+192.168.1.0/24        # Ağ aralığı (CIDR)
+10.0.0.1-50           # IP aralığı
+scanme.nmap.org       # Domain
+```
 
-2. Scan modunu seç:
-   | Buton | Açıklama |
-   |-------|----------|
-   | **QUICK SCAN** | Hızlı port ve host keşfi |
-   | **OS DETECT** | İşletim sistemi tespiti (`-O` flag) |
-   | **SCRIPT AUDIT** | NSE script tabanlı güvenlik denetimi |
+**Mod seç ve çalıştır:**
 
-3. **EXECUTE SVILIA** butonuna bas ve **Live Recon Stream** panelinden sonuçları izle.
+| Buton | Nmap Karşılığı | Açıklama |
+|-------|---------------|----------|
+| `QUICK SCAN` | `nmap -F` | Hızlı port keşfi |
+| `OS DETECT` | `nmap -O` | İşletim sistemi tespiti |
+| `SCRIPT AUDIT` | `nmap -sC -sV` | Script + versiyon taraması |
+
+**EXECUTE SVILIA** butonuna bas → **Live Recon Stream** panelinden sonuçları izle.
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Teknoloji | Kullanım |
-|-----------|----------|
-| React 19 | UI Framework |
-| TypeScript | Tip güvenliği |
-| Vite 6 | Build & Dev server |
-| Tailwind CSS 4 | Stil |
-| Nmap | Ağ tarama motoru |
+```
+Frontend  →  React 19 + TypeScript + Vite 6
+Styling   →  Tailwind CSS 4
+Engine    →  Nmap 7.98
+Animasyon →  Motion (Framer Motion)
+İkonlar   →  Lucide React
+```
 
 ---
 
 ## ⚠️ Yasal Uyarı
 
-Bu araç yalnızca **yetkili olduğunuz ağlar ve sistemler** üzerinde kullanım içindir. İzinsiz ağ taraması yasalara aykırı olabilir. Geliştiriciler, aracın kötüye kullanımından sorumlu tutulamaz.
+> Bu araç yalnızca **yetkili olduğunuz ağlar ve sistemler** üzerinde kullanım içindir.
+> İzinsiz ağ taraması birçok ülkede yasalara aykırıdır.
+> Geliştiriciler, aracın kötüye kullanımından sorumlu tutulamaz.
 
 ---
 
 ## 👨‍💻 Geliştiriciler
 
-Bu proje iki kişi tarafından geliştirilmiştir.
-
-- [@wortex213433](https://github.com/wortex213433)
+<div align="center">
+<table>
+  <tr>
+    <td align="center" width="300">
+      <a href="https://github.com/svilia">
+        <img src="https://github.com/svilia.png" width="100" height="100" style="border-radius: 50%; border: 3px solid #39FF14;" alt="svilia"/>
+        <br/><br/>
+        <b>svilia</b>
+        <br/>
+        <sub>Co-Developer</sub>
+      </a>
+    </td>
+    <td align="center" width="300">
+      <a href="https://github.com/wortex213433">
+        <img src="https://github.com/wortex213433.png" width="100" height="100" style="border-radius: 50%; border: 3px solid #39FF14;" alt="wortex213433"/>
+        <br/><br/>
+        <b>wortex213433</b>
+        <br/>
+        <sub>Co-Developer</sub>
+      </a>
+    </td>
+  </tr>
+</table>
+</div>
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ for the security community</sub>
+  <sub>Built with ❤️ for the security community · SVILIA-X-VECTOR-SYNC_V4</sub>
 </div>
